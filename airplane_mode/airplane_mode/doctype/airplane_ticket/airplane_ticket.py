@@ -3,20 +3,22 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe import throw , _
 import string
 import random
 
 class AirplaneTicket(Document):
 	def before_save(self) :
-		#check in not seat name  
+		#check if not seat name  
 		if not self.seat  :
 			self.seat = self.seat_random_create()
 	def validate(self):
 		self.validate_add_ons()
 		self.caculate_totals()
+		self.validate_airplane_capacity()
 		# remove it afetr test 
-		if not self.seat :
-			self.seat = self.seat_random_create()
+		# if not self.seat :
+		# 	self.seat = self.seat_random_create()
 	def seat_random_create(self) :
 		# this function will create 3 length straing first 2 letters will be numbers and end the end will add on cap letter
 		seat_name = ''.join(random.choice( string.digits) for _ in range(2)) +\
@@ -47,4 +49,13 @@ class AirplaneTicket(Document):
 		if self.status != "Boarded":
 			frappe.throw(frappe._(f"{self.status}  Not valide status \n  Please set status Boarded " ))	
 
-			
+	def validate_airplane_capacity(self) :
+		airplane = frappe.get_value("Airplane Flight" , self.flight , "airplane")
+		capacity = frappe.get_value("Airplane" , airplane , 'capacity')
+		ticket_count = frappe.db.get_list("Airplane Ticket" , filters={"flight" : self.flight} , 
+					fields=['count(name) as count'] )[0].get("count")
+
+		
+		if float(ticket_count or 0) > float(capacity or 0) :
+			frappe.throw(_(f"airplane capacity : {capacity} is full "))
+

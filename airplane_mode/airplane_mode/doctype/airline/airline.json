@@ -47,7 +47,8 @@
    "fieldname": "website",
    "fieldtype": "Data",
    "in_global_search": 1,
-   "label": "Website"
+   "label": "Website",
+   "options": "URL"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -57,7 +58,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2024-03-31 02:12:03.589990",
+ "modified": "2024-03-31 02:30:49.668483",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
