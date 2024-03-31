@@ -1,0 +1,17 @@
+<h1> {{flight.name}}  </h1>
+
+<h2> 
+    Flight Details
+</h2>
+
+<ul>
+
+    <li>Airplane : {{ flight.airplane }}</li>
+    <li> {{flight.source_airport_code}} > {{ flight.destination_airport_code}}</li>
+    <li>  {{ frappe.utils.format_date(flight.date_of_departure, "d MMMM, YYYY")  }} | {{ flight.time_of_departure}} 
+    </li>
+    
+    <li> Duration  {{frappe.utils.format_duration(flight.duration)}}</li>
+    <li> <a href="airplane_flight_row?flight={{flight.name}}">  Book Flight </a> </li>
+
+</ul>
