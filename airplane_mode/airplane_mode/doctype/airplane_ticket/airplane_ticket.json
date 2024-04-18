@@ -11,6 +11,7 @@
   "column_break_yyff",
   "flight",
   "seat",
+  "gate_number",
   "section_break_ekpm",
   "source_airport",
   "source_airport_code",
@@ -172,12 +173,18 @@
    "label": "Flight",
    "options": "Airplane Flight",
    "reqd": 1
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-18 04:28:04.917399",
+ "modified": "2024-04-18 14:37:01.762711",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

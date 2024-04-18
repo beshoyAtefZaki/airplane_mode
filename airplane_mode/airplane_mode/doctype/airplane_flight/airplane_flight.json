@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "airplane",
+  "gate_number",
   "column_break_6d03",
   "status",
   "airport_details_section",
@@ -134,6 +135,11 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "has_web_view": 1,
@@ -146,7 +152,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-04-17 16:00:52.954027",
+ "modified": "2024-04-18 14:15:08.154539",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
