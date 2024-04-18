@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{airplane}-{MM}-{YYYY}-{#####}",
  "creation": "2024-01-01 23:27:19.382240",
@@ -21,7 +22,8 @@
   "column_break_iraa",
   "time_of_departure",
   "amended_from",
-  "route"
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -126,9 +128,17 @@
    "in_global_search": 1,
    "label": "Route",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
  "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "is_submittable": 1,
  "links": [
   {
@@ -136,7 +146,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-03-31 01:56:24.903080",
+ "modified": "2024-04-17 16:00:52.954027",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

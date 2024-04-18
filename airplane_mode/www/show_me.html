@@ -1,12 +1,19 @@
 
 <style>
-
+    {% if frappe.form_dict.color %}
     #section
     {
-        background-color: {{color}};
+        background-color: {{frappe.form_dict.color}} ;
         height: 600px;
         width: 600px;
     }
+    {% else %}
+    #section{
+        background-color: black ;
+        height: 600px;
+        width: 600px;
+    }
+{% endif %}
 </style>
 
 

@@ -4,8 +4,10 @@
 # import frappe
 from frappe.model.document import Document
 
-
-class AirplaneFlight(Document):
+from frappe.website.website_generator import WebsiteGenerator
+class AirplaneFlight(WebsiteGenerator):
 	def on_submit(self) :
 		#set status to copleted 
-		self.status = "Compeleted"
+		self.status = "Completed"
+	def before_submit(self):
+		self.status = "Completed"

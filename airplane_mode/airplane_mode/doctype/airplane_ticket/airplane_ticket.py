@@ -8,7 +8,7 @@ import string
 import random
 
 class AirplaneTicket(Document):
-	def before_save(self) :
+	def before_insert(self) :
 		#check if not seat name  
 		if not self.seat  :
 			self.seat = self.seat_random_create()
@@ -17,12 +17,12 @@ class AirplaneTicket(Document):
 		self.caculate_totals()
 		self.validate_airplane_capacity()
 		# remove it afetr test 
-		# if not self.seat :
-		# 	self.seat = self.seat_random_create()
+		if not self.seat :
+			self.seat = self.seat_random_create()
 	def seat_random_create(self) :
 		# this function will create 3 length straing first 2 letters will be numbers and end the end will add on cap letter
 		seat_name = ''.join(random.choice( string.digits) for _ in range(2)) +\
-		 			''.join(random.choice( string.ascii_uppercase) for _ in range(1))
+		 			''.join(random.choice( ["A","B","C" ,"E"]) for _ in range(1))
 		return seat_name
 
 	def caculate_totals(self):
