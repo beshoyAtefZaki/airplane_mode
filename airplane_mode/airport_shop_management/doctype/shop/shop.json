@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2024-04-18 12:49:19.799200",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_info_section",
+  "name1",
+  "column_break_kitg",
+  "email",
+  "phone",
+  "contract_details_section",
+  "rent_amount",
+  "column_break_nshz",
+  "date_of_expiry",
+  "start_date",
+  "main_info_section",
+  "shop_name",
+  "column_break_c9op",
+  "shop_number",
+  "available",
+  "airport_section",
+  "airport",
+  "physical_properties_section",
+  "area",
+  "column_break_1nie",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_info_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant info"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent amount"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date of expiry"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "column_break_kitg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nshz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "main_info_section",
+   "fieldtype": "Section Break",
+   "label": "Main info"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop name"
+  },
+  {
+   "fieldname": "column_break_c9op",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop number"
+  },
+  {
+   "fieldname": "airport_section",
+   "fieldtype": "Section Break",
+   "label": "Airport"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "physical_properties_section",
+   "fieldtype": "Section Break",
+   "label": "Physical properties"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area"
+  },
+  {
+   "fieldname": "column_break_1nie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "available",
+   "fieldtype": "Check",
+   "label": "Available"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-18 13:53:02.975629",
+ "modified_by": "Administrator",
+ "module": "Airport shop management",
+ "name": "Shop",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
