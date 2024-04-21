@@ -1,40 +1,47 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-04-18 13:55:28.846926",
+ "autoname": "field:name1",
+ "creation": "2024-04-20 19:45:27.437606",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "default_rent_amount",
-  "enable_rent_reminders"
+  "name1",
+  "airport"
  ],
  "fields": [
   {
-   "fieldname": "default_rent_amount",
-   "fieldtype": "Currency",
-   "label": "Default rent amount"
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
   },
   {
-   "fieldname": "enable_rent_reminders",
-   "fieldtype": "Data",
-   "label": "Enable rent reminders"
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "issingle": 1,
  "links": [],
- "modified": "2024-04-18 13:56:21.882251",
+ "modified": "2024-04-20 19:46:22.518754",
  "modified_by": "Administrator",
  "module": "Airport shop management",
- "name": "Global Cinfiguration",
+ "name": "Area",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
+   "report": 1,
    "role": "System Manager",
    "share": 1,
    "write": 1

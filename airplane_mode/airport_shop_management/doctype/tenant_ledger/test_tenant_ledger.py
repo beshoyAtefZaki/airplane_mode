@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestGlobalCinfiguration(FrappeTestCase):
+class TestTenantLedger(FrappeTestCase):
 	pass

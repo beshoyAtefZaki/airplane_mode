@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "airplane",
+  "gate_number",
   "column_break_6d03",
   "status",
   "airport_details_section",
@@ -147,6 +148,12 @@
    "fieldtype": "Table",
    "label": "Crew member",
    "options": "Crew member"
+  },
+   {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
+
   }
  ],
  "has_web_view": 1,
@@ -159,6 +166,7 @@
    "link_fieldname": "flight"
   }
  ],
+
  "modified": "2024-04-21 09:28:47.831552",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
