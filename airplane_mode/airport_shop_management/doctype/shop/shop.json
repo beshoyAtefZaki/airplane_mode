@@ -1,26 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "field:shop_name",
  "creation": "2024-04-18 12:49:19.799200",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "tenant_info_section",
-  "name1",
-  "column_break_kitg",
-  "email",
-  "phone",
   "contract_details_section",
-  "rent_amount",
+  "available",
   "column_break_nshz",
-  "date_of_expiry",
-  "start_date",
   "main_info_section",
   "shop_name",
   "column_break_c9op",
   "shop_number",
-  "available",
   "airport_section",
   "airport",
   "physical_properties_section",
@@ -30,49 +22,9 @@
  ],
  "fields": [
   {
-   "fieldname": "tenant_info_section",
-   "fieldtype": "Section Break",
-   "label": "Tenant info"
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "Phone"
-  },
-  {
    "fieldname": "contract_details_section",
    "fieldtype": "Section Break",
    "label": "Contract details"
-  },
-  {
-   "fieldname": "rent_amount",
-   "fieldtype": "Currency",
-   "label": "Rent amount"
-  },
-  {
-   "fieldname": "date_of_expiry",
-   "fieldtype": "Date",
-   "label": "Date of expiry"
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start date"
-  },
-  {
-   "fieldname": "column_break_kitg",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_nshz",
@@ -86,7 +38,10 @@
   {
    "fieldname": "shop_name",
    "fieldtype": "Data",
-   "label": "Shop name"
+   "in_list_view": 1,
+   "label": "Shop name",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "column_break_c9op",
@@ -106,7 +61,8 @@
    "fieldname": "airport",
    "fieldtype": "Link",
    "label": "Airport",
-   "options": "Airport"
+   "options": "Airport",
+   "reqd": 1
   },
   {
    "fieldname": "physical_properties_section",
@@ -115,8 +71,9 @@
   },
   {
    "fieldname": "area",
-   "fieldtype": "Data",
-   "label": "Area"
+   "fieldtype": "Link",
+   "label": "Area",
+   "options": "Area"
   },
   {
    "fieldname": "column_break_1nie",
@@ -128,15 +85,16 @@
    "label": "Notes"
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "available",
    "fieldtype": "Check",
-   "label": "Available"
+   "label": "Available",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-18 13:53:02.975629",
+ "modified": "2024-04-20 19:46:38.330773",
  "modified_by": "Administrator",
  "module": "Airport shop management",
  "name": "Shop",

@@ -1,11 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:name1",
  "creation": "2024-04-18 15:01:03.272802",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "name1",
+  "national_id",
   "column_break_soxy",
   "email",
   "phone"
@@ -14,7 +16,13 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "email",
@@ -31,14 +39,20 @@
   {
    "fieldname": "column_break_soxy",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-18 15:03:42.783503",
+ "modified": "2024-04-20 19:43:13.940866",
  "modified_by": "Administrator",
  "module": "Airport shop management",
  "name": "Tenant",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

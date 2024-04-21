@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class GlobalCinfiguration(Document):
+class Area(Document):
 	pass
