@@ -103,8 +103,7 @@
    "fetch_from": "flight.time_of_departure",
    "fieldname": "departure_time",
    "fieldtype": "Time",
-   "label": "Departure Time",
-   "reqd": 1
+   "label": "Departure Time"
   },
   {
    "fetch_from": "flight.duration",
@@ -184,7 +183,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-21 16:39:26.277709",
+ "modified": "2024-04-21 16:44:08.465027",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

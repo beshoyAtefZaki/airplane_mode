@@ -10,12 +10,16 @@ import random
 class AirplaneTicket(Document):
 	def before_insert(self) :
 		#check if not seat name  
+  
+
+
 		if not self.seat  :
 			self.seat = self.seat_random_create()
 	def validate(self):
 		self.validate_add_ons()
 		self.caculate_totals()
 		self.validate_airplane_capacity()
+		self.set_departure_time()
 		# remove it afetr test 
 		if not self.seat :
 			self.seat = self.seat_random_create()
@@ -24,7 +28,9 @@ class AirplaneTicket(Document):
 		seat_name = ''.join(random.choice( string.digits) for _ in range(2)) +\
 		 			''.join(random.choice( ["A","B","C" ,"E"]) for _ in range(1))
 		return seat_name
-
+	def set_departure_time(self) :
+		if not self.departure_time :
+			self.departure_time = frappe.get_value("Airplane Flight" , self.flight , 'time_of_departure')
 	def caculate_totals(self):
 		total_add_ons = 0 
 		for add_on in self.add_ons :
