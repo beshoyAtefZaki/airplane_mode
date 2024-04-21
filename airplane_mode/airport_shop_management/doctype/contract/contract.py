@@ -20,7 +20,7 @@ class Contract(Document):
 	def validate(self):
 		self.validate_dates()
 		self.validate_status()
-		self.create_payemnt_scheduel()
+		
 	def validate_dates(self):
 		if self.doe < self.contract_start_date :
 			frappe.throw(_("Start date can not be befor expire date "))
@@ -37,6 +37,7 @@ class Contract(Document):
 
 	def update_shop_status(self) :
 		frappe.db.set_value('Shop', self.shop , 'available', 0)
+		frappe.db.set_value('Shop', self.shop , 'contract', self.name)
 	def before_save(self) :
 		"""
 		Set rent amount if not 
@@ -48,12 +49,15 @@ class Contract(Document):
 		self.validate_shop()
 	def on_submit(self) :
 		self.update_shop_status()
-		
+		self.create_payemnt_scheduel()
+
+
+
 	def create_payemnt_scheduel(self) :
-		start_date = self.contract_start_date  
+		
 		end_date   = self.doe
-		month_rent = self.contract_start_date  #add_to_date(self.contract_start_date  ,months=1   , as_string=True)
-		validation_date =self.contract_start_date  # add_to_date(self.contract_start_date  ,months=1  ,days=-1 , as_string=True)
+		month_rent = self.contract_start_date 
+		validation_date =self.contract_start_date  
 		while validation_date < end_date  :
 			#create scheduel 
 			scheduel = frappe.new_doc("Shop monthly rent scheduel" )
