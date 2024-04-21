@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-04-21 13:26:17.629843",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "mandatory": 0,
+   "options": "Airport",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-04-21 13:28:54.002938",
+ "modified_by": "Administrator",
+ "module": "Airport shop management",
+ "name": "Available Airport",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    name AS 'Shop ID',\n    shop_name AS 'Shop Name',\n    shop_number AS 'Shop Number',\n    COUNT(*) AS 'Count'\nFROM\n    `tabShop`\nWHERE\n    available = 1\n    AND\n    airport = %(airport)s\nGROUP BY\n    shop_name, shop_number\n",
+ "ref_doctype": "Shop",
+ "report_name": "Available Airport",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
