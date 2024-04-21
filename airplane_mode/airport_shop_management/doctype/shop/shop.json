@@ -9,7 +9,7 @@
   "contract_details_section",
   "available",
   "column_break_nshz",
-  "link_iwui",
+  "contract",
   "main_info_section",
   "shop_name",
   "column_break_c9op",
@@ -93,7 +93,7 @@
    "read_only": 1
   },
   {
-   "fieldname": "link_iwui",
+   "fieldname": "contract",
    "fieldtype": "Link",
    "label": "Active Contract",
    "options": "Contract"
@@ -106,7 +106,7 @@
    "link_fieldname": "shop"
   }
  ],
- "modified": "2024-04-21 10:18:38.270717",
+ "modified": "2024-04-21 14:36:11.593977",
  "modified_by": "Administrator",
  "module": "Airport shop management",
  "name": "Shop",

@@ -9,6 +9,7 @@
   "amended_from",
   "tenant",
   "contract",
+  "email",
   "column_break_vxzx",
   "due_date",
   "shop",
@@ -68,12 +69,19 @@
    "fieldname": "amount",
    "fieldtype": "Currency",
    "label": "Amount"
+  },
+  {
+   "fetch_from": "tenant.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-21 10:21:27.934388",
+ "modified": "2024-04-21 14:56:35.045682",
  "modified_by": "Administrator",
  "module": "Airport shop management",
  "name": "Tenant Rent Payment",
