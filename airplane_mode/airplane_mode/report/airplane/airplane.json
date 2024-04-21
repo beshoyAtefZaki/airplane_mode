@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-04-21 09:36:55.077923",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "airplane_flight",
+   "fieldtype": "Link",
+   "label": "Airplane Flight Name",
+   "mandatory": 0,
+   "options": "Airplane Flight",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-04-21 10:10:53.522278",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Airplane",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    DISTINCT af.name AS 'Flight Name',\n    acm.member AS 'Crew Member'\nFROM\n    `tabAirplane Flight` af\nLEFT JOIN\n    `tabCrew member` acm ON af.name = acm.parent\nWHERE\n    af.name = %(airplane_flight)s\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n\n\n\n",
+ "ref_doctype": "Airplane Flight",
+ "report_name": "Airplane",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

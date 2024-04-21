@@ -23,7 +23,9 @@
   "time_of_departure",
   "amended_from",
   "route",
-  "published"
+  "published",
+  "airplane_crew_member_section",
+  "crew_member"
  ],
  "fields": [
   {
@@ -134,6 +136,17 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "airplane_crew_member_section",
+   "fieldtype": "Section Break",
+   "label": "Airplane crew member"
+  },
+  {
+   "fieldname": "crew_member",
+   "fieldtype": "Table",
+   "label": "Crew member",
+   "options": "Crew member"
   }
  ],
  "has_web_view": 1,
@@ -146,7 +159,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-04-17 16:00:52.954027",
+ "modified": "2024-04-21 09:28:47.831552",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
