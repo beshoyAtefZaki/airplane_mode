@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-21 11:25:24.505628",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "shop",
+  "amount",
+  "due_date",
+  "is_pyed"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_pyed",
+   "fieldtype": "Check",
+   "label": "Is Pyed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-21 11:28:15.589764",
+ "modified_by": "Administrator",
+ "module": "Airport shop management",
+ "name": "Shop monthly rent scheduel",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
