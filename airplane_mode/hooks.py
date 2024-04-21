@@ -134,7 +134,7 @@ app_license = "mit"
 # ---------------
 scheduler_events = {
     	"daily": [
-		    "airplane_mode.airport_shop_management.controllers.airplane_mode.airport_shop_management.controllers"
+		    "airplane_mode.airport_shop_management.controllers.check_contract_monthly_payments"
         ],
 }
 # scheduler_events = {
